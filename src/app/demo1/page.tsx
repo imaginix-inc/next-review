@@ -8,7 +8,7 @@ export default function Demo1Page() {
   // 无es3、es5要求，可任意使用es6以上版本特性
   useEffect(() => {
     const fetchData = async () => {
-      const response = await fetch("/api/data"); // 请求 API 路由
+      // /api/data
     };
 
     fetchData();
