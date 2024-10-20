@@ -29,12 +29,6 @@ function timerReducer(
 function TimerProvider({ children }: { children: React.ReactNode }) {
   const [timers, dispatch] = useReducer(timerReducer, []);
 
-  // Load timers from localStorage
-  useEffect(() => {}, []);
-
-  // Save timers to localStorage whenever they change
-  useEffect(() => {}, []);
-
   // Tick every second
   useEffect(() => {}, []);
 
@@ -50,8 +44,6 @@ function useTimers() {
 }
 
 function TimerControls() {
-  const { dispatch } = useTimers();
-
   return (
     <div>
       <button
@@ -67,7 +59,7 @@ function TimerControls() {
 }
 
 function TimerList() {
-  const { timers, dispatch } = useTimers();
+  const { timers } = useTimers();
 
   return (
     <div>
